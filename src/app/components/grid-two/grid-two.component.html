@@ -1,0 +1,11 @@
+<igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+    ...
+    </igx-grid>
+    
+    <ng-template #pager>
+        <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage"
+                [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden" [selectLabel]="'Records per page:'"
+                [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
+        </igx-paginator>
+    </ng-template>
+    
